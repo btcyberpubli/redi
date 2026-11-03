@@ -149,6 +149,218 @@
       padding-block: clamp(2.5rem, 7vw, 5rem) 4rem;
     }
 
+    .portal-intro,
+    .topics,
+    .editorial-note,
+    .guide-section,
+    .standards-section,
+    .mobility-section {
+      width: min(100%, var(--content-width));
+      margin-inline: auto;
+    }
+
+    .portal-intro {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .portal-intro h2,
+    .topics h2,
+    .editorial-note h2,
+    .guide-section h2,
+    .standards-section h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.55rem, 4vw, 2.1rem);
+      line-height: 1.2;
+    }
+
+    .portal-intro p:last-child,
+    .editorial-note p {
+      max-width: 62ch;
+      margin: 0.75rem 0 0;
+      color: #4e524c;
+    }
+
+    .article-section {
+      padding-top: 2.5rem;
+    }
+
+    .article-section-label {
+      width: min(100%, var(--content-width));
+      margin: 0 auto 1rem;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 750;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .topics {
+      margin-top: 4rem;
+      padding-block: 2rem;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .topic-item {
+      padding-top: 0.85rem;
+      border-top: 2px solid var(--accent);
+    }
+
+    .topic-item h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+    }
+
+    .topic-item p {
+      margin: 0.4rem 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .editorial-note {
+      padding-top: 2rem;
+    }
+
+    .guide-section,
+    .standards-section,
+    .mobility-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .guide-section > p,
+    .standards-section > p,
+    .mobility-section > p {
+      max-width: 62ch;
+      margin: 0.75rem 0 0;
+      color: #4e524c;
+    }
+
+    .guide-list {
+      display: grid;
+      gap: 0.85rem;
+      margin: 1.25rem 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .guide-list li {
+      padding-left: 0.25rem;
+    }
+
+    .mobility-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .mobility-card {
+      padding-top: 0.9rem;
+      border-top: 2px solid var(--accent);
+    }
+
+    .mobility-card h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+    }
+
+    .mobility-card p {
+      margin: 0.55rem 0 0;
+      color: #4e524c;
+      font-size: 0.94rem;
+    }
+
+    .mobility-card ul {
+      display: grid;
+      gap: 0.55rem;
+      margin: 0.85rem 0 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .news-feed {
+      margin-top: 1.4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .news-feed h4 {
+      margin: 0;
+      font-size: 0.76rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .feed-status {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .feed-items {
+      display: grid;
+      gap: 0.85rem;
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feed-items li {
+      padding-top: 0.7rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .feed-items a {
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .feed-items a:hover {
+      color: var(--accent-dark);
+    }
+
+    .feed-meta {
+      display: block;
+      margin-top: 0.3rem;
+      color: var(--muted);
+      font-size: 0.74rem;
+    }
+
+    .standards-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem 1.5rem;
+      margin: 1.25rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .standards-list li {
+      padding-top: 0.65rem;
+      border-top: 2px solid var(--accent);
+      font-size: 0.92rem;
+    }
+
     .article {
       width: min(100%, var(--content-width));
       margin-inline: auto;
@@ -355,6 +567,20 @@
         font-size: 1.06rem;
       }
 
+      .topics-grid {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+      }
+
+      .standards-list {
+        grid-template-columns: 1fr;
+      }
+
+      .mobility-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
       .footer-inner {
         align-items: flex-start;
         flex-direction: column;
@@ -394,16 +620,29 @@
 
     <nav class="category-nav" aria-label="Categorías">
       <ul class="page-shell category-list">
-        <li><a href="/tecnologia">Tecnología</a></li>
-        <li><a href="/apps">Apps</a></li>
-        <li><a href="/sociedad">Sociedad</a></li>
-        <li><a href="/entretenimiento">Entretenimiento</a></li>
+        <li><a href="#portada">Portada</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#sociedad">Sociedad</a></li>
+        <li><a href="#autos">Autos</a></li>
+        <li><a href="#motos">Motos</a></li>
+        <li><a href="#guia">Guía práctica</a></li>
+        <li><a href="#criterios">Criterios editoriales</a></li>
+        <li><a href="#el-portal">El portal</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="contenido" class="page-shell">
-    <article class="article">
+    <section class="portal-intro" id="portada" aria-labelledby="portal-title">
+      <p class="section-label">Tendencias Digitales AR</p>
+      <h2 id="portal-title">Ideas para entender la vida digital</h2>
+      <p>Un espacio informativo sobre tecnología cotidiana, aplicaciones, movilidad y las formas en que el mundo digital se integra a nuestros pasatiempos.</p>
+    </section>
+
+    <section class="article-section" aria-labelledby="article-section-title">
+      <p class="article-section-label" id="article-section-title">Artículo · Apps y entretenimiento</p>
+      <article class="article" id="apps">
       <header class="article-header">
         <p class="section-label">Apps y entretenimiento</p>
         <h1>El boom de las apps de entretenimiento y lógica: por qué los juegos de ingenio lideran las descargas en Argentina este año</h1>
@@ -438,12 +677,101 @@
       </div>
 
       <div class="article-cta">
-        <a class="cta-link" href="https://tu-dominio.com/apps-del-mes">
-          Ver listado recomendado de apps del mes
+        <a class="cta-link" href="#guia">
+          Ver guía para elegir apps
           <span aria-hidden="true">→</span>
         </a>
       </div>
-    </article>
+      </article>
+    </section>
+
+    <section class="topics" aria-labelledby="topics-title">
+      <h2 id="topics-title">Temas que seguimos</h2>
+      <div class="topics-grid">
+        <article class="topic-item" id="tecnologia">
+          <h3>Tecnología</h3>
+          <p>Herramientas, hábitos digitales y cambios tecnológicos explicados en un lenguaje claro.</p>
+        </article>
+        <article class="topic-item">
+          <h3>Apps y entretenimiento</h3>
+          <p>Aplicaciones, juegos y experiencias interactivas para distintos momentos del día.</p>
+        </article>
+        <article class="topic-item" id="sociedad">
+          <h3>Sociedad</h3>
+          <p>Una mirada a cómo la tecnología se cruza con la vida cotidiana y los vínculos.</p>
+        </article>
+        <article class="topic-item">
+          <h3>Autos y movilidad</h3>
+          <p>Orientación general para el uso responsable y el cuidado cotidiano del vehículo.</p>
+        </article>
+        <article class="topic-item">
+          <h3>Motos</h3>
+          <p>Recomendaciones prácticas para prepararse antes de salir y cuidar el equipo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mobility-section" aria-labelledby="mobility-title">
+      <h2 id="mobility-title">Movilidad: guías para autos y motos</h2>
+      <p>Información general para incorporar revisiones simples a la rutina. Consultá siempre el manual del fabricante y las normas vigentes de tu jurisdicción.</p>
+      <div class="mobility-grid">
+        <article class="mobility-card" id="autos">
+          <h3>Autos</h3>
+          <p>Una revisión básica antes de un viaje ayuda a detectar a tiempo señales que requieren atención profesional.</p>
+          <ul>
+            <li>Controlá presión y estado visible de los neumáticos en frío, según el manual.</li>
+            <li>Verificá luces, limpiaparabrisas y niveles indicados por el fabricante.</li>
+            <li>Ante testigos encendidos, ruidos o cambios en el frenado, consultá un taller calificado.</li>
+          </ul>
+          <section class="news-feed" aria-labelledby="autos-feed-title">
+            <h4 id="autos-feed-title">Noticias de Autos</h4>
+            <p class="feed-status" data-feed-status="autos" aria-live="polite">Cargando titulares…</p>
+            <ul class="feed-items" data-feed-items="autos"></ul>
+          </section>
+        </article>
+        <article class="mobility-card" id="motos">
+          <h3>Motos</h3>
+          <p>La preparación del conductor y el estado del vehículo forman parte de cada salida, incluso en trayectos cortos.</p>
+          <ul>
+            <li>Usá casco homologado, correctamente ajustado, y equipo visible y adecuado.</li>
+            <li>Antes de circular, observá neumáticos, frenos, luces y espejos.</li>
+            <li>Adaptá velocidad y distancia a las condiciones del camino y del clima.</li>
+          </ul>
+          <section class="news-feed" aria-labelledby="motos-feed-title">
+            <h4 id="motos-feed-title">Noticias de Motos</h4>
+            <p class="feed-status" data-feed-status="motos" aria-live="polite">Cargando titulares…</p>
+            <ul class="feed-items" data-feed-items="motos"></ul>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="guide-section" id="guia" aria-labelledby="guide-title">
+      <h2 id="guide-title">Guía práctica: antes de instalar una app</h2>
+      <p>Unos minutos de revisión ayudan a entender qué ofrece una aplicación y qué datos o condiciones implica su uso.</p>
+      <ul class="guide-list">
+        <li><strong>Revisá los permisos:</strong> compará el acceso que solicita con las funciones que realmente necesitás.</li>
+        <li><strong>Leé las condiciones:</strong> comprobá si hay compras, suscripciones, anuncios o funciones sujetas a pago.</li>
+        <li><strong>Chequeá la edad recomendada:</strong> tené en cuenta las clasificaciones y opciones de control disponibles.</li>
+        <li><strong>Buscá información reciente:</strong> consultá la ficha oficial y las actualizaciones antes de instalar o compartir datos.</li>
+      </ul>
+    </section>
+
+    <section class="standards-section" id="criterios" aria-labelledby="standards-title">
+      <h2 id="standards-title">Criterios editoriales</h2>
+      <p>El contenido informativo debe distinguirse claramente de cualquier promoción. Las afirmaciones sobre productos o tendencias requieren contexto y fuentes comprobables.</p>
+      <ul class="standards-list">
+        <li>Identificar con claridad el contenido publicitario o patrocinado.</li>
+        <li>No presentar estimaciones como estadísticas verificadas.</li>
+        <li>Actualizar o corregir información cuando cambien los datos disponibles.</li>
+        <li>Separar recomendaciones editoriales de enlaces comerciales.</li>
+      </ul>
+    </section>
+
+    <section class="editorial-note" id="el-portal" aria-labelledby="about-title">
+      <h2 id="about-title">Sobre este portal</h2>
+      <p>Tendencias Digitales AR es un espacio dedicado a tecnología cotidiana, aplicaciones y entretenimiento digital. Esta página contiene una nota editorial y material de orientación para ayudar a los lectores a evaluar servicios y aplicaciones.</p>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -453,7 +781,7 @@
         <ul class="footer-links">
           <li><a href="/terminos-y-condiciones">Términos y Condiciones</a></li>
           <li><a href="/politica-de-privacidad">Política de Privacidad</a></li>
-          <li><a href="mailto:contacto@tu-dominio.com">Contacto</a></li>
+          <li><a href="/contacto">Contacto</a></li>
         </ul>
       </nav>
       <p class="copyright">© <span id="year"></span> Tendencias Digitales AR. Todos los derechos reservados.</p>
@@ -474,6 +802,64 @@
     dateElement.textContent = dateFormatter.format(today);
 
     document.querySelector("#year").textContent = today.getFullYear();
+
+    const newsDateFormatter = new Intl.DateTimeFormat("es-AR", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+
+    async function loadNews(category) {
+      const status = document.querySelector(`[data-feed-status="${category}"]`);
+      const list = document.querySelector(`[data-feed-items="${category}"]`);
+
+      if (window.location.protocol === "file:") {
+        status.textContent = "Los titulares se cargan al ejecutar el proyecto con Vercel.";
+        return;
+      }
+
+      try {
+        const response = await fetch(`/api/news?category=${encodeURIComponent(category)}`);
+        if (!response.ok) throw new Error("No se pudieron cargar los titulares.");
+
+        const result = await response.json();
+        if (!result.configured) {
+          status.textContent = "Fuentes RSS autorizadas pendientes de configurar.";
+          return;
+        }
+
+        if (!result.items.length) {
+          status.textContent = "No hay titulares disponibles en este momento.";
+          return;
+        }
+
+        const items = result.items.map((item) => {
+          const listItem = document.createElement("li");
+          const link = document.createElement("a");
+          const metadata = document.createElement("span");
+
+          link.href = item.link;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = item.title;
+          metadata.className = "feed-meta";
+          metadata.textContent = item.date
+            ? `${item.source} · ${newsDateFormatter.format(new Date(item.date))}`
+            : item.source;
+
+          listItem.append(link, metadata);
+          return listItem;
+        });
+
+        list.replaceChildren(...items);
+        status.textContent = "Titulares de fuentes externas. Abrí el enlace para leer cada nota en su medio original.";
+      } catch {
+        status.textContent = "No se pudieron cargar los titulares. Probá nuevamente más tarde.";
+      }
+    }
+
+    loadNews("autos");
+    loadNews("motos");
   </script>
 </body>
 </html>
