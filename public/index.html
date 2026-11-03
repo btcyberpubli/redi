@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Cómo las apps de estrategia, lógica y entretenimiento rápido ganan espacio en los ratos libres de los argentinos.">
+  <title>El boom de las apps de entretenimiento y lógica | Tendencias Digitales AR</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f6f2;
+      --ink: #20231f;
+      --muted: #656962;
+      --line: #d9d9d2;
+      --accent: #bd3829;
+      --accent-dark: #922b20;
+      --surface: #eeede7;
+      --content-width: 760px;
+      --page-width: 1120px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 10;
+      padding: 0.65rem 0.9rem;
+      transform: translateY(-180%);
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .page-shell {
+      width: min(100% - 2rem, var(--page-width));
+      margin-inline: auto;
+    }
+
+    .utility-bar {
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .utility-inner {
+      display: flex;
+      min-height: 2.5rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .edition {
+      margin: 0;
+    }
+
+    .masthead {
+      padding-block: 1.25rem 1rem;
+      text-align: center;
+    }
+
+    .brand {
+      display: inline-block;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.7rem, 7vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      text-decoration: none;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .brand-note {
+      margin: 0.4rem 0 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .category-nav {
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .category-list {
+      display: flex;
+      min-height: 3rem;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(1.25rem, 5vw, 3.5rem);
+      margin: 0;
+      padding: 0.5rem 0;
+      overflow-x: auto;
+      list-style: none;
+      scrollbar-width: thin;
+    }
+
+    .category-list a {
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 650;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .category-list a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      padding-block: clamp(2.5rem, 7vw, 5rem) 4rem;
+    }
+
+    .article {
+      width: min(100%, var(--content-width));
+      margin-inline: auto;
+    }
+
+    .article-header {
+      margin-bottom: 1.75rem;
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 1rem;
+      color: var(--accent);
+      font-size: 0.74rem;
+      font-weight: 750;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section-label::before {
+      width: 1.4rem;
+      height: 2px;
+      background: currentColor;
+      content: "";
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 6vw, 3.55rem);
+      font-weight: 700;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    .dek {
+      max-width: 650px;
+      margin: 1.1rem auto 0;
+      color: #4e524c;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.08rem, 2.7vw, 1.3rem);
+      line-height: 1.5;
+      text-wrap: pretty;
+    }
+
+    .byline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.35rem 0.8rem;
+      margin: 1.25rem 0 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .byline strong {
+      color: var(--ink);
+      font-weight: 650;
+    }
+
+    .article-image {
+      margin: 2rem 0 2.2rem;
+      background: var(--surface);
+    }
+
+    .article-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    figcaption {
+      padding: 0.55rem 0.75rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      line-height: 1.4;
+    }
+
+    .article-body {
+      max-width: 680px;
+      margin-inline: auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+      line-height: 1.8;
+    }
+
+    .article-body p {
+      margin: 0 0 1.35rem;
+    }
+
+    .article-body p:first-child::first-letter {
+      float: left;
+      margin: 0.08em 0.12em 0 0;
+      color: var(--accent);
+      font-size: 3.5em;
+      font-weight: 700;
+      line-height: 0.78;
+    }
+
+    .article-cta {
+      display: flex;
+      justify-content: center;
+      margin: 2.25rem 0 0;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      min-height: 3rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      padding: 0.75rem 1.1rem;
+      border: 1px solid var(--accent);
+      color: var(--accent-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .cta-link:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .cta-link span {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .site-footer {
+      border-top: 2px solid var(--ink);
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem 2rem;
+      padding-block: 1.5rem;
+    }
+
+    .footer-brand {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #444840;
+      font-size: 0.8rem;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-dark);
+    }
+
+    .copyright {
+      width: 100%;
+      margin: 0;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.73rem;
+    }
+
+    @media (max-width: 520px) {
+      .page-shell {
+        width: min(100% - 1.25rem, var(--page-width));
+      }
+
+      .utility-inner {
+        min-height: 2.25rem;
+      }
+
+      .category-list {
+        justify-content: flex-start;
+        gap: 1.5rem;
+        padding-inline: 0.15rem;
+      }
+
+      .article-body {
+        font-size: 1.06rem;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="utility-bar">
+    <div class="page-shell utility-inner">
+      <p class="edition">Argentina · Edición digital</p>
+      <time id="today" datetime="">Cargando fecha</time>
+    </div>
+  </div>
+
+  <header>
+    <div class="page-shell masthead">
+      <a class="brand" href="/" aria-label="Tendencias Digitales AR, inicio">
+        Tendencias Digitales <span>AR</span>
+      </a>
+      <p class="brand-note">Tecnología, cultura y vida digital</p>
+    </div>
+
+    <nav class="category-nav" aria-label="Categorías">
+      <ul class="page-shell category-list">
+        <li><a href="/tecnologia">Tecnología</a></li>
+        <li><a href="/apps">Apps</a></li>
+        <li><a href="/sociedad">Sociedad</a></li>
+        <li><a href="/entretenimiento">Entretenimiento</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" class="page-shell">
+    <article class="article">
+      <header class="article-header">
+        <p class="section-label">Apps y entretenimiento</p>
+        <h1>El boom de las apps de entretenimiento y lógica: por qué los juegos de ingenio lideran las descargas en Argentina este año</h1>
+        <p class="dek">Los ratos libres encontraron una nueva compañía en el celular: desafíos breves, estrategia y experiencias interactivas para jugar a cualquier hora.</p>
+        <p class="byline">
+          <strong>Por Redacción Tendencias Digitales AR</strong>
+          <span aria-hidden="true">·</span>
+          <span>Lectura: 3 minutos</span>
+        </p>
+      </header>
+
+      <figure class="article-image">
+        <img
+          src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&amp;fit=crop&amp;w=1400&amp;q=75"
+          alt="Persona jugando un videojuego en un dispositivo móvil"
+          width="1400"
+          height="788"
+          fetchpriority="low"
+          decoding="async"
+        >
+        <figcaption>Los juegos breves y accesibles se integran cada vez más a las pausas cotidianas. Imagen ilustrativa.</figcaption>
+      </figure>
+
+      <div class="article-body">
+        <p>En la Argentina, el celular se convirtió en una opción a mano para ocupar esos minutos entre una actividad y otra. En el transporte, durante una pausa o al final del día, muchas personas eligen abrir una app y resolver un desafío rápido. La posibilidad de empezar y detenerse sin demasiadas vueltas ayuda a que estas experiencias encuentren lugar en la rutina.</p>
+
+        <p>Los juegos de estrategia y lógica proponen algo más que pasar el tiempo: invitan a anticipar movimientos, reconocer patrones y probar distintas soluciones. Hay opciones para quienes prefieren partidas tranquilas y otras que plantean retos breves con objetivos claros. Esa variedad permite que cada usuario encuentre una dificultad y un ritmo que le resulten atractivos.</p>
+
+        <p>También crece el interés por las plataformas interactivas de entretenimiento rápido, con rondas cortas, rankings o nuevos desafíos que se renuevan con frecuencia. Su formato acompaña el uso cotidiano del teléfono y facilita compartir resultados o recomendar una experiencia. La clave está en que la interacción sea sencilla y que el contenido ofrezca motivos para volver sin exigir largas sesiones.</p>
+
+        <p>La tendencia reúne comodidad, curiosidad y ganas de ejercitar la mente, aunque cada persona se acerca a estas apps de manera distinta. Para elegir, conviene revisar las funciones, la edad recomendada, los permisos solicitados y las condiciones de uso. Así, el entretenimiento móvil puede adaptarse mejor a cada momento y a las preferencias de quienes lo disfrutan.</p>
+      </div>
+
+      <div class="article-cta">
+        <a class="cta-link" href="https://tu-dominio.com/apps-del-mes">
+          Ver listado recomendado de apps del mes
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-inner">
+      <p class="footer-brand">Tendencias Digitales AR</p>
+      <nav aria-label="Información del sitio">
+        <ul class="footer-links">
+          <li><a href="/terminos-y-condiciones">Términos y Condiciones</a></li>
+          <li><a href="/politica-de-privacidad">Política de Privacidad</a></li>
+          <li><a href="mailto:contacto@tu-dominio.com">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© <span id="year"></span> Tendencias Digitales AR. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const today = new Date();
+    const dateFormatter = new Intl.DateTimeFormat("es-AR", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+
+    const dateElement = document.querySelector("#today");
+    dateElement.dateTime = today.toISOString().slice(0, 10);
+    dateElement.textContent = dateFormatter.format(today);
+
+    document.querySelector("#year").textContent = today.getFullYear();
+  </script>
+</body>
+</html>
