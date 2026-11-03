@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/",
+      "source": "/((?!api/|terminos-y-condiciones|politica-de-privacidad|contacto).*)",
       "destination": "/api/redirect"
     },
     {
