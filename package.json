@@ -1,8 +1,7 @@
 {
-  "name": "tendencias-digitales-ar",
+  "name": "cloaker-app",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
-  "dependencies": {
-    "rss-parser": "^3.13.0"
-  }
+  "dependencies": {}
 }

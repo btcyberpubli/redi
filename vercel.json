@@ -1,23 +1,20 @@
 {
-    
-  "name": "cloaker-app",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "dependencies": {},
-	"rewrites": [
-		{
-			"source": "/terminos-y-condiciones",
-			"destination": "/terminos-y-condiciones.html"
-		},
-		{
-			"source": "/politica-de-privacidad",
-			"destination": "/politica-de-privacidad.html"
-		},
-		{
-			"source": "/contacto",
-			"destination": "/contacto.html"
-		}
-	]
-
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/redirect"
+    },
+    {
+      "source": "/terminos-y-condiciones",
+      "destination": "/terminos-y-condiciones.html"
+    },
+    {
+      "source": "/politica-de-privacidad",
+      "destination": "/politica-de-privacidad.html"
+    },
+    {
+      "source": "/contacto",
+      "destination": "/contacto.html"
+    }
+  ]
 }
